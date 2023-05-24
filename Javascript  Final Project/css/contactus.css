@@ -1,0 +1,26 @@
+#register-form label , #login-form label{
+    text-align: right;
+    display: inline-block;
+}
+
+#register-form input , #login-form label{
+    padding: 5px;
+    margin-top: 10px;
+}
+
+fieldset {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+#form2 {
+    margin-top: 50px;
+}
+
+input[type=text] , input[type=email] , input[type=tel] input[type=password] {
+    border-radius: 5px;
+    margin-top: 5px;
+}

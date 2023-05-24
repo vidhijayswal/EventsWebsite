@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+    <title>Sunday.com</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Sunday.com</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contactus.html">Join Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="section1">
+
+            <div class="abc xyz">
+                <img src="images/homeimage3.jpg" style="width:100%">
+            </div>
+
+            <div class="abc xyz">
+                <img src="images/homeimage1.jpg" style="width:100%">
+            </div>
+
+            <div class="abc xyz">
+                <img src="images/homeimage2.jpg" style="width:100%">
+
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div class="back">
+            <h1 class="anim">Our Mission : We Create You Celebrate</h1>
+            <p>We have been serving our community since 1986.We take pride in our work, therefore, with our years of experience, qualified staff, excellent coordination and planning skills, we guarantee you 100% satisfaction when you allow us to take charge of every detail.We hope to be able to service you, when we do, we will make sure that in that special day you and you can enjoy a grand event leaving with nothing to do except enjoy yourself.we'll take care of the rest.Our mission statement is every great event starts with organized details while executing them brilliantly!
+            </p>
+
+        </div>
+
+    </main>
+
+    <script src="js/automaticslideshow.js"></script>
+
+    <script>
+        var textWrapper = document.querySelector('.anim');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({
+                loop: true
+            })
+            .add({
+                targets: '.anim .letter',
+                opacity: [0, 1],
+                easing: "easeInOutQuad",
+                duration: 2250,
+                delay: (el, i) => 150 * (i + 1)
+            }).add({
+                targets: '.anim',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+    </script>
+</body>
+<footer>
+    <p>Made with love by &copy;Vidhi Jayswal</p>
+</footer></html>
